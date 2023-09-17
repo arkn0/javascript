@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>practicle 4</title>
+</head>
+<body>
+    <script>
+        //String literal 
+        var str = "<h3>hello this is string literal:</h3>"
+        document.write(str+"<br>");
+
+        //By string object (using new keyword )
+        //creating string using new keyword;
+        var str1 = new String("<h3>hello this is string object : </h3>");
+        document.write(str1);
+
+        //using toUpperCase
+        //this method convert string into upper alphabets;
+        var str2 = "hello java script<br>";
+        document.write(str2.toUpperCase());
+
+        //using lowercase method
+        //toLowerCase is convert string into lower alphabets
+        var str3 = "HELLO EVERYONE <br> ";
+        var str4 = str3.toLowerCase();
+        document.write(str4);
+
+        //using indexOf method
+        //indexOf method shows the index position of character from start . present in the string , it also include space 
+        var s = "hello javascript from indexof";
+        var n = s.indexOf("from");
+        document.write(n+"<br>");
+
+        //using lastindexof
+        //lastindexOf method is shows index position same as indexOf , but it start fram last;
+        var s1 = "javasript from javapointindexof";
+        var n1 = s1.lastIndexOf("java");
+        document.write(n1+"<br>");
+
+        //concat method
+        //this method is provid a combination of two or more string ;
+        var s2 = "Javascript";
+        var s3 = " Is powerfull language ";
+        var s4 = s2.concat(s3);
+        document.write(s4+"<br>");
+        
+    </script>
+    
+</body>
+</html>

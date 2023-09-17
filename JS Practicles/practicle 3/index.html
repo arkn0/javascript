@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Array methods</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: 0;
+            height: 100vh;
+    
+        }
+        .container{
+            border: 1px solid black;
+        }
+
+    </style>
+    <style>
+        .my-button{
+            width: 130px;
+            height: 30px;
+        }
+    </style>
+    
+    <style>
+        .u-button{
+            width: 110px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center><h2>Sort() Method</h2></center>
+        <center><button class="my-button" onclick="one()">Check</button></center>
+       <center> <div id="test1"></div></center>
+
+
+    </div>
+    <div class="container">
+        <center><h2>Reverse() Method</h2></center>
+        <center><button class="my-button" onclick="two()">Check</button></center>
+        <center><h3><div id="test2"></div></h3></center>
+
+    </div>
+
+    <div class="container">
+        <center><h2>Pop() Method</h2></center>
+        <center><button class="my-button" onclick="three()">Check</button></center>
+        <center><h3><div id="test3"></div></h3></center>
+
+    </div>
+    <div class="container">
+        <center><h2>Push() Method</h2></center>
+         <center><button class="my-button" onclick="four()">Check</button></center>
+         <center><h3><div id="test4"></div></h3></center>
+       
+    </div>
+    
+</body>
+<body>
+
+    <script>
+        function one()
+        {
+            var abc = document.getElementById("test1");
+            abc.innerHTML = "";
+            var a = [40,10,30,50,20];
+            abc.innerHTML += ("unsortted array: <br>");
+            for(var i=0;i<a.length;i++)
+            {
+                abc.innerHTML += (a[i]+"<br>");
+        
+            }
+            abc.innerHTML += ("sortted array: <br>");
+            a.sort();
+            for(i=0;i<a.length;i++)
+            {
+                abc.innerHTML += (a[i]+"<br>");
+            }
+        }
+        function two()
+        {
+            var out = document.getElementById("test2");
+            out.innerHTML = "";
+            var ar = ["Khizar", "Harsh", "Om", "Yash"];
+        out.innerHTML += (ar + "<br><br>");
+        ar.reverse();
+        out.innerHTML += (ar+ "<br>");
+        }
+        
+        function three()
+        {
+            var pass = document.getElementById("test3");
+            pass.innerHTML = "";
+          
+            var a = ["Jawan","Gadar","Pathan","OMG2 <br>"];
+            pass.innerHTML += (a+"<br>");
+            pass.innerHTML += ("After pop method :<br><br>");
+            a.pop();
+            pass.innerHTML += (a+"<br>");
+            
+        }
+
+        function four()
+        {
+            var out = document.getElementById("test4");
+            out.innerHTML = "";
+
+            var a = ["Jawan","Gadar","Pathan","OMG2 <br>"];
+            out.innerHTML += (a+"<br>");
+            out.innerHTML += ("After Push method:<br><br>");
+            a.push("Tiger 3");
+            out.innerHTML += (a);
+
+
+
+        }
+
+
+    </script>
+   
+
+</body>
+
+    
+</html>

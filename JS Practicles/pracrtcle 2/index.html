@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>practicle 2</title>
+
+   <style>
+    body{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0;
+        height: 100vh;
+
+    }
+    .container{
+        border: 1px solid black;
+    }
+    
+   </style>
+
+<style>
+    .my-button{
+        width: 150px;
+        height: 30px;
+    }
+    
+</style>
+
+
+
+</head>
+<body>
+   
+  <!-- if else statement -->
+    <div class="container">
+        <center><h1>if else statement</h1></center>
+        <center> <button class="my-button" onclick="set()">Check</button></center>
+        <div id="test"></div>
+      
+
+    </div>
+
+    <div class="container">
+        <center><h1>For loop</h1></center>
+        <center><button class="my-button" onclick="set1()">Check</button></center>
+       <center> <div id="test1"></div></center>
+        
+
+    </div>
+
+    <div class="container">
+        <center><h1>while loop</h1></center>
+        <center><button class="my-button" onclick="set2()">Check</button></center>
+        <center><h2><div id="test2"></div></h2></center>
+        
+        
+
+    </div>
+    <div class="container">
+        <center><h1>do while loop</h1></center>
+        <center><button class="my-button" onclick="set3()">Check</button></center>
+        <center><h2><div id="test3"></div></h2></center>
+
+    </div>
+
+
+   
+</body>
+<body>
+    <script>
+
+    function set(){
+        const age =  prompt("Enter your age:");
+        if(age>=18)
+        {
+            let a = "<center><h2>your are able to Drive</h2></center>";
+            test.innerHTML = a;
+
+
+           
+    
+        }
+        else{
+           let a = "<center><h2>you are not able to drive</h2></center>"
+           test.innerHTML = a;
+        }
+    }
+    
+        function set1() {
+            var doc = prompt("Please enter a number:");
+            var outputDiv = document.getElementById("test1");
+            outputDiv.innerHTML = ""; // Clear previous content
+            if (doc > 0) {
+                for (let i = 1; i < 11; i++) {
+                    const result = doc * i;
+                    outputDiv.innerHTML += "<p>" + result + "</p>";
+                }
+            }
+        }
+
+function set2()
+{
+    var outputDiv = document.getElementById("test2");
+    outputDiv.innerHTML = "";
+    var i = 1;
+       while(i<=10)
+       {
+        outputDiv.innerHTML += (" squar of " + i + " is = " + (i*i) + "<br>");
+        i++;
+       }
+
+    }
+    function set3()
+    {
+
+         var output = document.getElementById("test3");
+         output.innerHTML = ""; 
+        var sum = 0;
+        var number = 0;
+       
+        
+        do{
+            sum += number;
+            number = parseInt(prompt("Enter number for sum : "));
+
+        }while(number >= 0)
+        output.innerHTML += ("the sum is " + sum + "<br>");
+    }
+    
+
+
+    </script>
+</body>
+
+
+
+</html>
