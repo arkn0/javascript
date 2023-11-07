@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Example</title>
+</head>
+<body onload="onLoadEvent()" onunload="onUnloadEvent()">
+
+    <h1>Event Example</h1>
+
+    <form id="myForm" onsubmit="onSubmitEvent()">
+        <label for="inputField">Input Field:</label>
+        <input type="text" id="inputField" onkeypress="onKeyPressEvent()" onchange="onChangeEvent()" onselect="onSelectEvent()" onfocus="onFocusEvent()" onblur="onBlurEvent()">
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function onLoadEvent() {
+            console.log('Page loaded!');
+        }
+
+        function onUnloadEvent() {
+            console.log('Page unloaded!');
+        }
+
+        function onKeyPressEvent() {
+            console.log('Key pressed!');
+        }
+
+        function onChangeEvent() {
+            console.log('Value changed!');
+        }
+
+        function onSelectEvent() {
+            console.log('Text selected!');
+        }
+
+        function onFocusEvent() {
+            console.log('Input focused!');
+        }
+
+        function onBlurEvent() {
+            console.log('Input blurred!');
+        }
+
+        function onSubmitEvent() {
+            console.log('Form submitted!');
+            // You can add additional form submission logic here.
+        }
+    </script>
+
+</body>
+</html>

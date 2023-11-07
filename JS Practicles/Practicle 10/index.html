@@ -1,0 +1,49 @@
+Practical no. 10
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Example</title>
+</head>
+<body>
+
+    <h1>Cookies Example</h1>
+
+    <p id="cookieStatus">Cookie status: No cookies set</p>
+
+    <button onclick="createCookie()">Create Cookie</button>
+    <button onclick="updateCookie()">Update Cookie</button>
+    <button onclick="deleteCookie()">Delete Cookie</button>
+
+    <script>
+        function createCookie() {
+            document.cookie = "exampleCookie=Hello, this is an example cookie; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/";
+            updateCookieStatus();
+        }
+
+        function updateCookie() {
+            document.cookie = "exampleCookie=Updated value; expires=Fri, 31 Dec 2023 23:59:59 GMT; path=/";
+            updateCookieStatus();
+        }
+
+        function deleteCookie() {
+            document.cookie = "exampleCookie=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+            updateCookieStatus();
+        }
+
+        function updateCookieStatus() {
+            var cookieStatus = document.getElementById('cookieStatus');
+            var existingCookie = document.cookie.includes('exampleCookie');
+
+            if (existingCookie) {
+                cookieStatus.textContent = "Cookie status: Cookie is set";
+            } else {
+                cookieStatus.textContent = "Cookie status: No cookies set";
+            }
+        }
+    </script>
+
+</body>
+</html>

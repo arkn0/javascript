@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+<body>
+
+    <form id="myForm">
+        <label for="inputField">Input Field:</label>
+        <input type="text" id="inputField">
+
+        <button type="button" onclick="onClickEvent()">Click me</button>
+        <button type="button" ondblclick="onDoubleClickEvent()">Double click me</button>
+        <button type="button" onmouseover="onMouseOverEvent()">Mouse over me</button>
+        <button type="button" onmouseup="onMouseUpEvent()">Mouse up me</button>
+    </form>
+
+    <script>
+        function onClickEvent() {
+            alert('Click event triggered!');
+        }
+
+        function onDoubleClickEvent() {
+            alert('Double click event triggered!');
+        }
+
+        function onMouseOverEvent() {
+            alert('Mouse over event triggered!');
+        }
+
+        function onMouseUpEvent() {
+            alert('Mouse up event triggered!');
+        }
+    </script>
+
+</body>
+</html>

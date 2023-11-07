@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rollover Effect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rollover Effect</h1>
+    </header>
+
+    <nav id="main-menu">
+        <a href="#" data-menu-item="home" onmouseover="changeColor(this)" onmouseout="resetColor(this)">Home</a>
+        <a href="#" data-menu-item="about" onmouseover="changeColor(this)" onmouseout="resetColor(this)">About</a>
+        <a href="#" data-menu-item="services" onmouseover="changeColor(this)" onmouseout="resetColor(this)">Services</a>
+        <a href="#" data-menu-item="contact" onmouseover="changeColor(this)" onmouseout="resetColor(this)">Contact</a>
+    </nav>
+
+    <section>
+        <p>Move your mouse over the menu items to see the rollover effect.</p>
+    </section>
+
+    <script>
+        function changeColor(element) {
+            element.style.backgroundColor = "#777";
+            element.style.color = "#fff";
+        }
+
+        function resetColor(element) {
+            element.style.backgroundColor = "#555";
+            element.style.color = "#fff";
+        }
+    </script>
+
+</body>
+</html>

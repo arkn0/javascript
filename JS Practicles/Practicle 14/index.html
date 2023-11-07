@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Menu Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        section {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>JavaScript Menu Validation</h1>
+    </header>
+
+    <nav id="main-menu">
+        <a href="#" data-menu-item="home">Home</a>
+        <a href="#" data-menu-item="about">About</a>
+        <a href="#" data-menu-item="services">Services</a>
+        <a href="#" data-menu-item="contact">Contact</a>
+    </nav>
+
+    <section>
+        <p id="output">Select a menu item.</p>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menu = document.getElementById('main-menu');
+            const output = document.getElementById('output');
+
+            menu.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                if (event.target.tagName === 'A') {
+                    const menuItem = event.target.getAttribute('data-menu-item');
+                    validateMenuSelection(menuItem);
+                }
+            });
+
+            function validateMenuSelection(menuItem) {
+                switch (menuItem) {
+                    case 'home':
+                        output.textContent = 'You selected Home.';
+                        break;
+                    case 'about':
+                        output.textContent = 'You selected About.';
+                        break;
+                    case 'services':
+                        output.textContent = 'You selected Services.';
+                        break;
+                    case 'contact':
+                        output.textContent = 'You selected Contact.';
+                        break;
+                    default:
+                        output.textContent = 'Select a menu item.';
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Banner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .text {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="slideshow-container">
+        <div class="mySlides">
+            <img src="https://via.placeholder.com/1000x300" alt="Slide 1">
+            <div class="text">Caption for Slide 1</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="https://via.placeholder.com/1000x300" alt="Slide 2">
+            <div class="text">Caption for Slide 2</div>
+        </div>
+
+        <div class="mySlides">
+            <img src="https://via.placeholder.com/1000x300" alt="Slide 3">
+            <div class="text">Caption for Slide 3</div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides() {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slideIndex++;
+
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showSlides(); // Initial call to start the slideshow
+        });
+    </script>
+
+</body>
+</html>
